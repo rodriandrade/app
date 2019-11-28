@@ -1,0 +1,42 @@
+h1{
+    font-size: 3em;
+    font-family: 'Questrial', sans-serif; 
+    text-align: center;
+}
+
+#gamesContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.games{
+    width:15%;
+    height: 200px;
+    border:1px solid rgb(238, 238, 238);
+    margin-left:2em;
+}
+
+#gamesContainer{
+    display:none;
+}
+
+#containerProfiles{
+    display: flex;
+    justify-content: center;
+}
+
+.profiles{
+    width:20%;
+    background-color:beige;
+    margin:2em 0 0 4em;
+}
+
+#playerOne p{
+    font-size:1em;
+}
+
+#playerOne img, #playerTwo img{
+    width:40%;
+    border-radius:50%;
+    margin:0 auto;
+}

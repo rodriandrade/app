@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memotest</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik|Staatliches&display=swap" rel="stylesheet">
+</head>
+<body id="body" onload="startGame()">
+
+    <audio id="flipCard">
+        <source src="sounds/card_flip.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="rightChoice">
+        <source src="sounds/scoreFour.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="playerOneWins">
+        <source src="sounds/playerOneWins.wav" type="audio/mpeg">
+    </audio>
+    <audio id="playerTwoWins">
+        <source src="sounds/playerTwoWins.wav" type="audio/mpeg">
+    </audio>
+
+    <h1>MEMOTEST</h1>
+
+    <div id="options">
+
+        <label>Tablero:</label>
+        <select id="pick" onchange="createTable()">
+                <option value="4" selected>4 x 4</option>
+                <option value="5">5 x 5</option>
+                <option value="6">6 x 6</option>
+        </select>
+
+        <label>Banderas:</label>
+        <select id="flags" onchange="selectFlags()">
+                <option value="worldwide">Mundial</option>
+                <option value="africa">Africa</option>
+                <option value="america">América</option>
+                <option value="asia">Asia</option>
+                <option value="europe">Europa</option>
+        </select>
+        
+        <!--
+        <label>Tema:</label>
+        <select id="theme" onchange="changeTheme()" disabled>
+                <option value="blueSpace" selected>Blue Space</option>
+                <option value="aurora">Aurora</option>
+                <option value="otro">6 x 6</option>
+        </select>-->
+
+    </div>
+
+    <div id="morePoints">
+    </div>
+
+    <div id="players">
+        <p id="1" class="player"></p>
+        <p id="2"></p>
+    </div>
+          
+    <div id="container">
+    </div>
+
+    <p id="matches" class="matchesInfo">Partidas jugadas:</p>
+    <p id="matchesOne" class="matchesInfo"></p>
+    <p id="matchesTwo" class="matchesInfo"></p>
+    <p id="ties" class="matchesInfo"></p>
+
+    <button id="soundControl" onclick="soundControl()">Desactivar sonido</button>
+    <a href="../index.html">Back</a>
+ 
+    <!--
+    <div id="buttons">
+        <button id="reset" onclick="reset()">Reiniciar</button>
+        <button id="changeNames" onclick="playerName()">Cambiar jugadores</button>
+    </div>
+    -->
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
