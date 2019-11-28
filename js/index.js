@@ -209,6 +209,7 @@ function buildProfile(){ // Muestro los perfiles de los jugadores en el inicio
     var editTwo = document.createElement("button");
     document.getElementById("playerTwo").appendChild(editTwo);
     editTwo.innerHTML = "Editar perfil";
+    editTwo.set
 }
 
 function buildScores(){  // Obtengo los puntajes del jugador 1 y 2 en el Memotest y TaTeTi y los muestro en pantalla. También muestro los puntos en total entre los dos juegos para ambos  jugadores. 
@@ -262,6 +263,22 @@ function getTaTeTiScore(){ // Consigue los puntajes del jugador 1 y 2 en el TaTe
     firstTateti = JSON.parse(tatetiOne);
     var tatetiTwo = localStorage.getItem("scoreTwoTaTeTi");
     secondTateti = JSON.parse(tatetiTwo);
+}
+
+function resetScore(){ // Reiniciar puntaje
+    score[0].globalScore = 0;
+    score[0].memotestScore = 0;
+    score[0].tatetiScore = 0;
+    score[1].globalScore = 0;
+    score[1].memotestScore = 0;
+    score[1].tatetiScore = 0;
+
+    document.querySelector("#scoreOne", "p").innerHTML = "Puntaje global de" + " " + profiles[0].nickname + ":" + "" + score[0].globalScore;
+    document.querySelector("#memotestOne", "p").innerHTML = "Puntaje Memotest de" + " " + profiles[0].nickname + ":" + "" + score[0].memotestScore;
+    document.querySelector("#tatetiOne", "p").innerHTML = "Puntaje Tateti de" + " " + profiles[0].nickname + ":" + "" + score[0].tatetiScore;
+    document.querySelector("#scoreTwo", "p").innerHTML = "Puntaje global de" + " " + profiles[1].nickname + ":" + "" + score[1].globalScore;
+    document.querySelector("#memotestTwo", "p").innerHTML = "Puntaje Memotest de" + " " + profiles[1].nickname + ":" + "" + score[1].memotestScore;
+    document.querySelector("#tatetiTwo", "p").innerHTML = "Puntaje Tateti de" + " " + profiles[1].nickname + ":" + "" + score[1].tatetiScore;
 }
 
 app.initialize();
